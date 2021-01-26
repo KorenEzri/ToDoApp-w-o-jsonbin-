@@ -1,10 +1,11 @@
 # ![Scale-Up Velocity](./readme-files/logo-main.png) Pre Course Project - Todo List
 
 This project will include most of the topics we have learnt so far.
-This repository includes a basic skeleton with automated tests, use it for your submissions.
-In this project you will create a Todo List Web Application, in which the user can store prioritized _todo tasks_ and view/sort that list
+This repository includes a basic skeleton template with automated tests, use it for your submissions.
 
-Preview sample of functionality (no style):
+In this project you will create a Todo List Web Application, in which the user can store prioritized _todo tasks_ and view/sort that list.
+
+Here is a preview sample of the desired functionality (without styling):
 
 ![Add todo task](./readme-files/basic-todo.gif)
 
@@ -12,10 +13,10 @@ Preview sample of functionality (no style):
 
 - Fork this repository into your account. Make sure to select the **public** option
 - Clone your new repository to your computer
-- Install the project dependencies by running `npm install` from the vscode terminal `ctrl +j` (make sure you are in the correct directory)
+- Install the project dependencies by running `npm install` from the vscode terminal `ctrl + j` (make sure you are in the correct directory)
 <!-- - [Create new branch](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/managing-branches) -->
-- Change the project to meet the requirements
-- [Commit Early, Push Often](https://www.worklytics.co/commit-early-push-often/) - your work might be evaluated by your push history
+- Make changes in the code to meet the project requirements
+- [Commit Early, Push Often](https://www.worklytics.co/commit-early-push-often/) - your work will be evaluated by your push history
 - Good Luck!
 
 ## Running tests
@@ -24,7 +25,7 @@ We have created automated tests for your convenience, use it to check your progr
 
 Note that the automated tests rely on your code having the exact class names, Ids and objects structures as specified below.
 
-To run the tests locally simply run `npm run test` in the terminal (`ctrl +j`)
+To run the tests locally simply run `npm run test` in the terminal
 
 Note that each commit to `main` branch will trigger a github [action](https://docs.github.com/en/actions). You can easily see the action tests result:
 
@@ -33,11 +34,11 @@ Note that each commit to `main` branch will trigger a github [action](https://do
 ## Guidelines
 
 - The Todo list should have two sections: Control section and View section
-- The control section is where the user adds his todo task and priority, and should have three elements:
+- The _Control_ section is where the user adds his todo task and priority, and should have three elements:
   - [\<input\>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) with id `textInput`.
   - [\<select\>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select) with id `prioritySelector` (options will be: 1-5).
   - [\<button\>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button) with id `addButton`.
-- The View section is where we display the list of added todo tasks and data and should start empty. Each added todo should be inserted to the list.
+- The _View_ section is where we display the list of added todo tasks and data and should start empty. Each added todo should be inserted to the list.
 - After the user clicks on the 'add button' you need to "reset" the input value
 - Every todo item should have a "container" div with class `todoContainer` that will contain 3 sub-elements:
 
@@ -77,52 +78,27 @@ Note that each commit to `main` branch will trigger a github [action](https://do
     </div>
   ```
 
-- Add a counter element to reflect the **current** number of todos stored in the app. This element should have a id of `counter`.
+- Add a counter element to reflect the **current** number of todos stored in the app. This element should have an id of `counter`.
 
 - Add a button with id `sortButton`. Clicking this element should resort the todo list by their todos priority (DESC)
 
-  ![alt text](./readme-files/todo-bonus.gif)
+  ![alt text](./readme-files/todo.gif)
 
-- Make your todo-list presistent!
+- **Make your todo-list persistent!**
 
-  Use `localStorage` to save / load your todo list as JSON to persist between browser refreshes.
+  Save your todo-list as JSON (see `todo-list-example.json`) and store it in a persistent way, you have to options:
 
-  For extra credits, use the [JSONBIN.io](https://jsonbin.io/) service (GET / PUT requests) to host your to save / load your todo list as JSON to persist between _devices_ (**+20 bonus pts**).
+  1. Use the `localStorage` browser api to save / load the todo-list JSON **with the 'my-todo' key**. This will option make it persist between page reloads.
 
-  You can use [AJAX](https://www.w3schools.com/js/js_ajax_intro.asp) requests and [`fetch`](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) to comunicate with the JSONBIN.io API.
+  2. Use the [jsonbin.io](https://jsonbin.io/) service api (using async/await fetch GET & PUT requests) to save / load your todo-list JSON. This option will make it persist across _devices and browsers_. (**This will also grant you +20 bonus pts**).
 
-  A task data JSON _must_ look like the following:
+  You can use [AJAX](https://www.w3schools.com/js/js_ajax_intro.asp) requests and [`fetch`](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) to communicate with the jsonbin.io API.
 
-```
-  {
-    "text": "An example to-do", (string)
-    "priority": "1", (string)
-    "date": 1611662776177 (number - date in MS)
-  }
-```
-
-In order to pass the tests, use the exact same structure in this example.
-
-If you use `localStorage` as your presistent storage index your tasks using 'task'+ number of task
-
-Good way 👍🏿:
-
-```
-'task1' 'task2' 'task3' ...
-'task01' 'task02' 'task03' ... (pre fixing is also fine)
-```
-
-Bad way 👎🏿:
-
-```
-  'task-1' 'task 1' 'task-a' '1task' '1' ...
-```
-
-**Note** You can add more properties of your own, but this is the basis.
+**Note** You can add extra properties to the todo objects in the JSON that you want to be persistent.
 
 ## Bonus
 
-- Add a new feature/s - any cool functionality you want to add to the app
+- Add a new feature/s - any cool functionality you want to add to the app ()
 - https://htmldom.dev/drag-and-drop-element-in-a-list
 - Make the TODO list consistent - consider use [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
 - Add a way to search tasks
