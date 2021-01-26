@@ -1,19 +1,19 @@
 # ![Scale-Up Velocity](./readme-files/logo-main.png) Pre Course Project - Todo List
 
 This project will include most of the topics we have learnt so far.
-This repository includes a basic skeleton with automated tests, use it for you submissions.
+This repository includes a basic skeleton with automated tests, use it for your submissions.
 In this project you will create a Todo List Web Application, in which the user can store prioritized _todo tasks_ and view/sort that list
 
-Goal (only functionality):
+Preview sample of functionality (no style):
 
 ![Add todo task](./readme-files/basic-todo.gif)
 
 ## Instructions
 
-- Go [here](https://github.com/new/import) and fork this repository into your account. Make sure to select the **public** option
+- Fork this repository into your account. Make sure to select the **public** option
 - Clone your new repository to your computer
-- Install the project dependencies by running npm install from the project's directory (using a terminal)
-- [Create new brunch](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/managing-branches)
+- Install the project dependencies by running `npm install` from the vscode terminal `ctrl +j` (make sure you are in the correct directory) 
+<!-- - [Create new branch](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/managing-branches) -->
 - Change the project to meet the requirements
 - [Commit Early, Push Often](https://www.worklytics.co/commit-early-push-often/) - your work might be evaluated by your push history
 - Good Luck!
@@ -22,14 +22,11 @@ Goal (only functionality):
 
 We have created automated tests for your convenience, use it to check your progression.
 
-Note that the automated tests rely on your code having the exact class names and Ids as specified below.
-Feel free to add your own.
+Note that the automated tests rely on your code having the exact class names, Ids and objects structures as specified below.
 
-To run the tests simply run
+To run the tests locally simply run `npm run test` in the terminal (`ctrl +j`)
 
-```
-$ npm run test
-```
+Note that each commit to `main` branch will trigger a github action 
 
 ## Requirements
 
@@ -125,6 +122,7 @@ Bad way 👎🏿:
 - Make the TODO list consistent - consider use [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
 - Add a way to search tasks
 - Deploy your app to the internet ! using https://vercel.com/ add a link to your deployed app here (README.md)
+- Add a new test to check any bonus feature you implemented
 
 ## Grading policy
 
