@@ -12,7 +12,7 @@ Preview sample of functionality (no style):
 
 - Fork this repository into your account. Make sure to select the **public** option
 - Clone your new repository to your computer
-- Install the project dependencies by running `npm install` from the vscode terminal `ctrl +j` (make sure you are in the correct directory) 
+- Install the project dependencies by running `npm install` from the vscode terminal `ctrl +j` (make sure you are in the correct directory)
 <!-- - [Create new branch](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/managing-branches) -->
 - Change the project to meet the requirements
 - [Commit Early, Push Often](https://www.worklytics.co/commit-early-push-often/) - your work might be evaluated by your push history
@@ -26,29 +26,30 @@ Note that the automated tests rely on your code having the exact class names, Id
 
 To run the tests locally simply run `npm run test` in the terminal (`ctrl +j`)
 
-Note that each commit to `main` branch will trigger a github action 
+Note that each commit to `main` branch will trigger a github [action](https://docs.github.com/en/actions). You can easily see the action tests result:
 
-## Requirements
+![Commits test](./readme-files/commit-tests.png)
 
-- The web app should have a heading
-- The web app should have two sections: Control section and View section
+## Guidelines
+
+- The Todo list should have two sections: Control section and View section
 - The control section is where the user adds his todo task and priority, and should have three elements:
   - [\<input\>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) with id `textInput`.
   - [\<select\>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select) with id `prioritySelector` (options will be: 1-5).
   - [\<button\>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button) with id `addButton`.
 - The View section is where we display the list of added todo tasks and data and should start empty. Each added todo should be inserted to the list.
-- After the user click on add button you need to "reset" the input value
-- Every todo item should have "container" div with class `todoContainer` that will contain 3 elements:
+- After the user clicks on the 'add button' you need to "reset" the input value
+- Every todo item should have a "container" div with class `todoContainer` that will contain 3 sub-elements:
 
   - An element with a class `todoText` with the text of the todo task
   - An element with a class `todoCreatedAt` that will hold the creation time of the task in a [SQL format](https://www.w3schools.com/sql/sql_dates.asp#:~:text=SQL%20Date%20Data%20Types&text=DATE%20%2D%20format%20YYYY%2DMM%2D,YEAR%20%2D%20format%20YYYY%20or%20YY)
-  - An element for showing the numeric priority of the task, with a class `todoPriority`
+  - An element for showing the numeric priority value of the task, with a class `todoPriority`
 
   Good way 👍🏿:
 
   ```
     <div class="todoContainer">
-      <div class="priority">
+      <div class="todoPriority">
         1
       </div>
       <div class="todoCreatedAt">
@@ -64,7 +65,7 @@ Note that each commit to `main` branch will trigger a github action
 
   ```
     <div class="todoContainer">
-      <div class="priority">
+      <div class="todoPriority">
         1
       </div>
       <div class="todoCreatedAt">
@@ -76,15 +77,19 @@ Note that each commit to `main` branch will trigger a github action
     </div>
   ```
 
-- Add a counter element to reflect the **current** number of todos stored in the app. This element should have a id `counter`.
+- Add a counter element to reflect the **current** number of todos stored in the app. This element should have a id of `counter`.
 
 - Add a button with id `sortButton`. Clicking this element should resort the todo list by their todos priority (DESC)
 
   ![alt text](./readme-files/todo-bonus.gif)
 
-- Make your todo-list consistent! Use [JSON.bin](https://jsonbin.io/) to host your data as JSONs.
+- Make your todo-list presistent!
 
-  You can use [AJAX](https://www.w3schools.com/js/js_ajax_intro.asp) requests and [`fetch`](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) to comunicate with the API.
+  Use `localStorage` to save / load your todo list as JSON to persist between browser refreshes.
+
+  For extra credits, use the [JSONBIN.io](https://jsonbin.io/) service (GET / PUT requests) to host your to save / load your todo list as JSON to persist between _devices_ (**+20 bonus pts**).
+
+  You can use [AJAX](https://www.w3schools.com/js/js_ajax_intro.asp) requests and [`fetch`](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) to comunicate with the JSONBIN.io API.
 
   A task data JSON _must_ look like the following:
 
@@ -98,7 +103,7 @@ Note that each commit to `main` branch will trigger a github action
 
 In order to pass the tests, use the exact same structure in this example.
 
-If you use l`ocalStorage` as your presistent storage index your tasks using 'task'+ number of task
+If you use `localStorage` as your presistent storage index your tasks using 'task'+ number of task
 
 Good way 👍🏿:
 
