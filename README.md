@@ -1,4 +1,4 @@
-# ![Scale-Up Velocity](./readme-files/logo-main.png) Pre Course Project - Todo List
+# ![Scale-Up Velocity](./readme-files/logo-main.png) Pre Course Project - Todo List 📋
 
 This project will include most of the topics we have learnt so far.
 This repository includes a basic skeleton template with automated tests, use it for your submissions.
@@ -11,13 +11,13 @@ Here is a preview sample of the desired functionality (without styling):
 
 ## Instructions
 
-- Fork this repository into your account. Make sure to select the **public** option
-- Clone your new repository to your computer
-- Install the project dependencies by running `npm install` from the vscode terminal `ctrl + j` (make sure you are in the correct directory)
+- Fork this repository into your account. Make sure to select the **public** option ⑂
+- Clone your new repository to your computer 🖥
+- Install the project dependencies by running `npm install` from the vscode terminal `ctrl + j` (make sure you are in the correct directory) 📂
 <!-- - [Create new branch](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/managing-branches) -->
-- Make changes to the code to meet the project requirements
-- [Commit Early, Push Often](https://www.worklytics.co/commit-early-push-often/) - your work will be evaluated by your push history
-- Good Luck!
+- Make changes to the code to meet the project requirements 📝
+- [Commit Early, Push Often](https://www.worklytics.co/commit-early-push-often/) - your work will be evaluated by your push history 📖
+- Good Luck! 🤘
 
 ## Running tests
 
