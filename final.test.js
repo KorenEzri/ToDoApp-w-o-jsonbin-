@@ -64,9 +64,9 @@ const projectName = "pre.Todo App";
 describe(projectName, () => {
   beforeAll(async () => {
     browser = await puppeteer.launch({
-      // headless: false, // Uncomment me to see tests running
+      // headless: false, // Uncomment me to see tests running in browser
       args: ["--disable-web-security"],
-      // slowMo: 50, // Uncomment and change me to slow down tests speed.
+      // slowMo: 50, // Uncomment and change me to slow down tests speed in browser.
     });
     page = await browser.newPage();
     useNock(page, ["https://api.jsonbin.io/v3"]);
@@ -88,7 +88,7 @@ describe(projectName, () => {
 
     await page.goto(path, { waitUntil: "networkidle0" });
 
-    const elements = await page.$$(".todoText");
+    const elements = await page.$$(".todo-text");
     expect(elements.length).toBe(0);
   });
 
@@ -105,20 +105,20 @@ describe(projectName, () => {
 
     await page.goto(path, { waitUntil: "networkidle0" });
 
-    await page.type("#textInput", firstTaskText);
-    await page.select("#prioritySelector", firstTaskPriority);
-    await page.click("#addButton");
+    await page.type("#text-input", firstTaskText);
+    await page.select("#priority-selector", firstTaskPriority);
+    await page.click("#add-button");
 
-    await page.waitForSelector(".todoText");
+    await page.waitForSelector(".todo-text");
 
-    const elements = await page.$$(".todoText");
+    const elements = await page.$$(".todo-text");
     const firstItem = await (
       await elements[0].getProperty("innerText")
     ).jsonValue();
 
-    await page.waitForSelector(".todoPriority");
+    await page.waitForSelector(".todo-priority");
 
-    const priorityElements = await page.$$(".todoPriority");
+    const priorityElements = await page.$$(".todo-priority");
     const firstItemPriority = await (
       await priorityElements[0].getProperty("innerText")
     ).jsonValue();
@@ -143,12 +143,12 @@ describe(projectName, () => {
 
     await page.goto(path, { waitUntil: "networkidle0" });
 
-    await page.waitForSelector("#textInput");
+    await page.waitForSelector("#text-input");
 
-    await page.type("#textInput", secondTaskText);
-    await page.select("#prioritySelector", secondTaskPriority);
-    await page.click("#addButton");
-    const inputElement = await page.$("#textInput");
+    await page.type("#text-input", secondTaskText);
+    await page.select("#priority-selector", secondTaskPriority);
+    await page.click("#add-button");
+    const inputElement = await page.$("#text-input");
     const currentInput = await (
       await inputElement.getProperty("value")
     ).jsonValue();
@@ -164,13 +164,13 @@ describe(projectName, () => {
 
     const mockToDo = mockToDos[1];
 
-    await page.waitForSelector(".todoText");
-    const elements = await page.$$(".todoText");
+    await page.waitForSelector(".todo-text");
+    const elements = await page.$$(".todo-text");
     const secondItem = await (
       await elements[1].getProperty("innerText")
     ).jsonValue();
 
-    const priorityElements = await page.$$(".todoPriority");
+    const priorityElements = await page.$$(".todo-priority");
     const secondItemPriority = await (
       await priorityElements[1].getProperty("innerText")
     ).jsonValue();
@@ -185,7 +185,7 @@ describe(projectName, () => {
 
     await page.goto(path, { waitUntil: "networkidle0" });
 
-    await page.waitForSelector(".todoContainer");
+    await page.waitForSelector(".todo-container");
 
     const counterElement = await page.$("#counter");
     const currentCounter = await (
@@ -203,11 +203,11 @@ describe(projectName, () => {
     const mockToDo = mockToDos[1];
 
     await page.click("#sortButton");
-    const elements = await page.$$(".todoText");
+    const elements = await page.$$(".todo-text");
     const secondItem = await (
       await elements[0].getProperty("innerText")
     ).jsonValue();
-    const priorityElements = await page.$$(".todoPriority");
+    const priorityElements = await page.$$(".todo-priority");
     const secondItemPriority = await (
       await priorityElements[0].getProperty("innerText")
     ).jsonValue();
@@ -239,10 +239,10 @@ describe(projectName, () => {
 
     await page.goto(path, { waitUntil: "networkidle0" });
 
-    await page.waitForSelector(".todoContainer");
+    await page.waitForSelector(".todo-container");
 
-    const textNode = await page.$$(".todoText");
-    const priorityNode = await page.$$(".todoPriority");
+    const textNode = await page.$$(".todo-text");
+    const priorityNode = await page.$$(".todo-priority");
 
     const text = await (await textNode[0].getProperty("innerText")).jsonValue();
     const priority = await (

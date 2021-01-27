@@ -35,28 +35,28 @@ Note that each commit to `main` branch will trigger a github [action](https://do
 
 - The Todo list should have two sections: Control section and View section
 - The _Control_ section is where the user adds his todo task and priority, and should have three elements:
-  - [\<input\>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) with id `textInput`.
-  - [\<select\>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select) with id `prioritySelector` (options will be: 1-5).
-  - [\<button\>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button) with id `addButton`.
+  - [\<input\>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) with id `text-input`.
+  - [\<select\>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select) with id `priority-selector` (options will be: 1-5).
+  - [\<button\>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button) with id `add-button`.
 - The _View_ section is where we display the list of added todo tasks and data and should start empty. Each added todo should be inserted to the list.
 - After the user clicks on the 'add button' you need to "reset" the input value
-- Every todo item should have a "container" div with class `todoContainer` that will contain 3 sub-elements:
+- Every todo item should have a "container" div with class `todo-container` that will contain 3 sub-elements:
 
-  - An element with a class `todoText` with the text of the todo task
-  - An element with a class `todoCreatedAt` that will hold the creation time of the task in a [SQL format](https://www.w3schools.com/sql/sql_dates.asp#:~:text=SQL%20Date%20Data%20Types&text=DATE%20%2D%20format%20YYYY%2DMM%2D,YEAR%20%2D%20format%20YYYY%20or%20YY)
-  - An element for showing the numeric priority value of the task, with a class `todoPriority`
+  - An element with a class `todo-text` with the text of the todo task
+  - An element with a class `todo-created-at` that will hold the creation time of the task in a [SQL format](https://www.w3schools.com/sql/sql_dates.asp#:~:text=SQL%20Date%20Data%20Types&text=DATE%20%2D%20format%20YYYY%2DMM%2D,YEAR%20%2D%20format%20YYYY%20or%20YY)
+  - An element for showing the numeric priority value of the task, with a class `todo-priority`
 
   Good way 👍🏿:
 
   ```
-    <div class="todoContainer">
-      <div class="todoPriority">
+    <div class="todo-container">
+      <div class="todo-priority">
         1
       </div>
-      <div class="todoCreatedAt">
+      <div class="todo-created-at">
         2020-06-18 11:51:12
       </div>
-      <div class="todoText">
+      <div class="todo-text">
         the todo text
       </div>
     </div>
@@ -65,14 +65,14 @@ Note that each commit to `main` branch will trigger a github [action](https://do
   Bad way 👎🏿:
 
   ```
-    <div class="todoContainer">
-      <div class="todoPriority">
+    <div class="todo-container">
+      <div class="todo-priority">
         1
       </div>
-      <div class="todoCreatedAt">
+      <div class="todo-created-at">
         2020-06-18 11:51:12
       </div>
-      <div class="todoText">
+      <div class="todo-text">
         <span>the todo text</span>
       </div>
     </div>
@@ -80,7 +80,7 @@ Note that each commit to `main` branch will trigger a github [action](https://do
 
 - Add a counter element to reflect the **current** number of todos stored in the app. This element should have an id of `counter`.
 
-- Add a button with id `sortButton`. Clicking this element should resort the todo list by their todos priority (DESC)
+- Add a button with id `sort-button`. Clicking this element should resort the todo list by their todos priority (DESC)
 
   ![alt text](./readme-files/todo.gif)
 
@@ -98,18 +98,23 @@ Note that each commit to `main` branch will trigger a github [action](https://do
 
 ## Bonus
 
-- Add a new feature/s - any cool functionality you want to add to the app ()
-- https://htmldom.dev/drag-and-drop-element-in-a-list
-- Make the TODO list consistent - consider use [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
-- Add a way to search tasks
-- Deploy your app to the internet ! using https://vercel.com/ add a link to your deployed app here (README.md)
-- Add a new test to check any bonus feature you implemented
+- Add a new test to check any bonus feature you implemented _(10pts)_
+- Add a drag n' drop functionality. [This](https://htmldom.dev/drag-and-drop-element-in-a-list) might be helpful _(10pts)_
+- Add a way to delete tasks (bonus on bonus - undo option) _(5pts)_
+- Add a way to search tasks _(5pts)_
+- Add a loading spinner if you are using fetch _(5pts)_
+- Dark mode _(5pts)_
+
+- Add any other cool functionality that you want to your app!
+
+  We suggest taking ideas from [htmldom](https://htmldom.dev/)
+
+**Add an explanation in `README.md` for each bonus feature you add and a link to any resoure you used**
 
 ## Grading policy
 
 - Your project will be graded by the number of automatic tests you pass
-- Visual creativity, use css to make this app app awesome 💅🏿
-- Bonus - Please add an explanation about the bonus task in the PR.
+- Visual creativity, use css to make this app app AWESOME 💅🏿
 - Code quality <!-- variable names, comments, function names? -->
 - Git usage <!-- commit messages -->
 
