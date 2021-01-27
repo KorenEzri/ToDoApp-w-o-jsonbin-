@@ -90,7 +90,7 @@ Note that each commit to `main` branch will trigger a github [action](https://do
 
   1. Use the `localStorage` browser api to save / load the todo-list JSON **with the 'my-todo' key**. This option will make it persist between _page reloads_.
 
-  2. Use the [jsonbin.io](https://jsonbin.io/) service api (using async/await fetch GET & PUT requests) to save / load your todo-list JSON. This option will make it persist across _devices and browsers_. (**This will also grant you +20 bonus pts**).
+  2. Use the [jsonbin.io](https://jsonbin.io/) service api (using async/await fetch GET & PUT requests) to save / load your todo-list JSON. This option will make it persist across _devices and browsers_.
 
 **Note** You can add extra properties to the todo objects in the JSON that you want to be persistent.
 
@@ -111,14 +111,14 @@ Note that each commit to `main` branch will trigger a github [action](https://do
 
 ## Grading policy
 
-- Your project will be graded by the number of automatic tests you pass +60pts
-- Using jsonbin.io +20pts
-- Extra freestyle features - Deserving features will grant +5pts each. Please add an explanation about the bonus features you added to the readme.md
-- new jest/puppeteer test +10pts
-- Code quality and style: indentation, Meaningful and non-disambiguate variable names, Comments documentation +10pts
-- Visual creativity, use css to make this app look awesome 💅🏿 +5pts
-- Division to reusable functions, no code duplication +10pts
-- Git usage: meaningful commit messages, small commits, folder and file structures +10pts
+- Your project will be graded by the number of automatic tests you pass
+- Using jsonbin.io
+- Extra freestyle features - Please add an explanation about the bonus features you added to the readme.md
+- new jest/puppeteer test
+- Code quality and style: indentation, Meaningful and non-disambiguate variable names, Comments documentation
+- Visual creativity, use css to make this app look awesome 💅🏿
+- Division to reusable functions, no code duplication
+- Git usage: meaningful commit messages, small commits, folder and file structures
 
 ## Submitting
 
