@@ -15,7 +15,7 @@ Here is a preview sample of the desired functionality (without styling):
 - Clone your new repository to your computer
 - Install the project dependencies by running `npm install` from the vscode terminal `ctrl + j` (make sure you are in the correct directory)
 <!-- - [Create new branch](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/managing-branches) -->
-- Make changes in the code to meet the project requirements
+- Make changes to the code to meet the project requirements
 - [Commit Early, Push Often](https://www.worklytics.co/commit-early-push-often/) - your work will be evaluated by your push history
 - Good Luck!
 
@@ -27,13 +27,13 @@ Note that the automated tests rely on your code having the exact class names, Id
 
 To run the tests locally simply run `npm run test` in the terminal
 
-Note that each commit to `main` branch will trigger a github [action](https://docs.github.com/en/actions). You can easily see the action tests result:
+Note that each commit to `main` branch will trigger a github [action](https://docs.github.com/en/actions). You can easily see the action tests result on each commit:
 
 ![Commits test](./readme-files/commit-tests.png)
 
 ## Guidelines
 
-- The Todo list should have two sections: Control section and View section
+- The Todo list should have two sections: _Control_ section and _View_ section
 - The _Control_ section is where the user adds his todo task and priority, and should have three elements:
   - [\<input\>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) with id `text-input`.
   - [\<select\>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select) with id `priority-selector` (options will be: 1-5).
@@ -88,11 +88,9 @@ Note that each commit to `main` branch will trigger a github [action](https://do
 
   Save your todo-list as JSON (see `todo-list-example.json`) and store it in a persistent way, you have to options:
 
-  1. Use the `localStorage` browser api to save / load the todo-list JSON **with the 'my-todo' key**. This will option make it persist between page reloads.
+  1. Use the `localStorage` browser api to save / load the todo-list JSON **with the 'my-todo' key**. This option will make it persist between _page reloads_.
 
   2. Use the [jsonbin.io](https://jsonbin.io/) service api (using async/await fetch GET & PUT requests) to save / load your todo-list JSON. This option will make it persist across _devices and browsers_. (**This will also grant you +20 bonus pts**).
-
-  You can use [AJAX](https://www.w3schools.com/js/js_ajax_intro.asp) requests and [`fetch`](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) to communicate with the jsonbin.io API.
 
 **Note** You can add extra properties to the todo objects in the JSON that you want to be persistent.
 
@@ -120,21 +118,9 @@ Note that each commit to `main` branch will trigger a github [action](https://do
 
 ## Submitting
 
-- When you are ready to submit run on windows `$env:RECORD_TEST='true'; npm run test`, on mac `RECORD_TEST=true npm run test` (Can take up to 3-4 min) that will create `ui-testing-recording.gif` that will show your app during testing session - push this file as well
-- Add `ui-testing-recording.gif` to the README.md file under this section, if you want you can add another gif if you feel the auto-generated one not beautiful enough
-- Record a 5 min selfie video, describe yourself in a few words, talk about the project you submit - try to explain how your app works. Think about this video as an interview
-- Upload the 5 min video to the cloud (google drive) and add here (README.md) the public link for the video (can be located under the gif)
-- [Create a Pull Request](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request) from the new brunch you created in the Instructions into master in your duplicated repository
-- add Github usernames: GuySerfaty, fainir and tomeryp as [collaborators](https://docs.github.com/en/github/setting-up-and-managing-your-github-user-account/inviting-collaborators-to-a-personal-repository) to your imported repo.
-- Add link to the PR you created in your private repo [here](https://docs.google.com/spreadsheets/d/1P9_YDGqIqmV10fvTmIXc_AGV0_ycI2aBFo2h5zprUMI/edit#gid=1903529310), fill the other details
+- Change this file (README.md) and style it to showcase your solution (gifs, explanations, link to the github page, links to resources you used, etc...)
+- Submit your solution repo to the ChallengeMe system
+- Submit your repo link and github page and video to Google Classroom
+- Record a 5-10 min selfie video, describe yourself in a few words (age, location, military background, technological background). Also, talk about the solution you submitted (try to explain how your app works in general and which bonuses you added). Think about this video as an interview.
 
 GOOD LUCK!
-
-Auto-Recorded test gif:
-![alt text](readme-files/ui-testing-recording.gif)
-
-Self-Recorded Demo:
-![short demo](readme-files/to-do-Listman-demo2.gif)
-
-- [Link to 5 minutes tour in the app with me] ()
-- Click [here](https://to-do-listman-git-editable.listguy.vercel.app/) to start using YOUR to-do List(man) today!
