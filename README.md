@@ -15,7 +15,7 @@ Here is a preview sample of the desired functionality (without styling):
 - Clone your new repository to your computer
 - Install the project dependencies by running `npm install` from the vscode terminal `ctrl + j` (make sure you are in the correct directory)
 <!-- - [Create new branch](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/managing-branches) -->
-- Make changes in the code to meet the project requirements
+- Make changes to the code to meet the project requirements
 - [Commit Early, Push Often](https://www.worklytics.co/commit-early-push-often/) - your work will be evaluated by your push history
 - Good Luck!
 
@@ -27,19 +27,21 @@ Note that the automated tests rely on your code having the exact class names, Id
 
 To run the tests locally simply run `npm run test` in the terminal
 
-Note that each commit to `main` branch will trigger a github [action](https://docs.github.com/en/actions). You can easily see the action tests result:
+Note that each commit to `main` branch will trigger a github [action](https://docs.github.com/en/actions). You can easily see the action tests result on each commit:
 
 ![Commits test](./readme-files/commit-tests.png)
 
+
+
 ## Guidelines
 
-- The Todo list should have two sections: Control section and View section
+- The Todo list should have two sections: _Control_ section and _View_ section
 - The _Control_ section is where the user adds his todo task and priority, and should have three elements:
   - [\<input\>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) with id `textInput`.
   - [\<select\>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select) with id `prioritySelector` (options will be: 1-5).
   - [\<button\>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button) with id `addButton`.
-- The _View_ section is where we display the list of added todo tasks and data and should start empty. Each added todo should be inserted to the list.
-- After the user clicks on the 'add button' you need to "reset" the input value
+- The _View_ section is where we display the list of added todo tasks and data. The list should start empty and each added todo should be inserted to the end of the list.
+- After the user clicks on the 'add' button, the todo input field should be "reset"
 - Every todo item should have a "container" div with class `todoContainer` that will contain 3 sub-elements:
 
   - An element with a class `todoText` with the text of the todo task
@@ -88,37 +90,41 @@ Note that each commit to `main` branch will trigger a github [action](https://do
 
   Save your todo-list as JSON (see `todo-list-example.json`) and store it in a persistent way, you have to options:
 
-  1. Use the `localStorage` browser api to save / load the todo-list JSON **with the 'my-todo' key**. This will option make it persist between page reloads.
+  1. Use the `localStorage` browser api to save / load the todo-list JSON **with the 'my-todo' key**. This option will make it persist between _page reloads_.
 
   2. Use the [jsonbin.io](https://jsonbin.io/) service api (using async/await fetch GET & PUT requests) to save / load your todo-list JSON. This option will make it persist across _devices and browsers_. (**This will also grant you +20 bonus pts**).
-
-  You can use [AJAX](https://www.w3schools.com/js/js_ajax_intro.asp) requests and [`fetch`](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) to communicate with the jsonbin.io API.
 
 **Note** You can add extra properties to the todo objects in the JSON that you want to be persistent.
 
 ## Bonus
 
-- Add a new feature/s - any cool functionality you want to add to the app ()
-- https://htmldom.dev/drag-and-drop-element-in-a-list
-- Make the TODO list consistent - consider use [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
-- Add a way to search tasks
-- Deploy your app to the github pages!
-- Add a new test to check any bonus feature you implemented
+- jsonbin.io - see explanation above
+- Freestyle - add any feature you desire. Some ideas:
+  - [drag n' drop functionality](https://htmldom.dev/drag-and-drop-element-in-a-list)
+  - Delete + Edit a todo
+  - Undo action
+  - Search and highlight results
+  - Loading spinner for network request
+  - Mark/Unmark todo as done
+  - Something awesome we didn't think of...
+- For added value, you can add jest/puppeteer test to test any bonus feature you implemented
 
 ## Grading policy
 
-- Your project will be graded by the number of automatic tests you pass
-- Visual creativity, use css to make this app app awesome 💅🏿
-- Bonus - Please add an explanation about the bonus task in the PR.
-- Code quality <!-- variable names, comments, function names? -->
-- Git usage <!-- commit messages -->
+- Your project will be graded by the number of automatic tests you pass +60pts
+- Using jsonbin.io +20pts
+- Extra freestyle features - Deserving features will grant +5pts each. Please add an explanation about the bonus features you added to the readme.md
+- new jest/puppeteer test +10pts
+- Code quality and style: indentation, Meaningful and non-disambiguate variable names, Comments documentation +10pts
+- Visual creativity, use css to make this app look awesome 💅🏿 +5pts
+- Division to reusable functions, no code duplication +10pts
+- Git usage: meaningful commit messages, small commits, folder and file structures +10pts
 
 ## Submitting
 
 - Change this file (README.md) and style it to showcase your solution (gifs, explanations, link to the github page, links to resources you used, etc...)
 - Submit your solution repo to the ChallengeMe system
-- Submit your repo link and github page and video to the Google Classroom
+- Submit your repo link and github page and video to Google Classroom
 - Record a 5-10 min selfie video, describe yourself in a few words (age, location, military background, technological background). Also, talk about the solution you submitted (try to explain how your app works in general and which bonuses you added). Think about this video as an interview.
-- Upload the 5 min video to the cloud (google drive) and add here (README.md) the public link for the video (can be located under the gif)
 
 GOOD LUCK!
