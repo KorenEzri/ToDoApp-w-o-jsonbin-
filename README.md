@@ -38,8 +38,8 @@ Note that each commit to `main` branch will trigger a github [action](https://do
   - [\<input\>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) with id `text-input`.
   - [\<select\>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select) with id `priority-selector` (options will be: 1-5).
   - [\<button\>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button) with id `add-button`.
-- The _View_ section is where we display the list of added todo tasks and data and should start empty. Each added todo should be inserted to the list.
-- After the user clicks on the 'add button' you need to "reset" the input value
+- The _View_ section is where we display the list of added todo tasks and data. The list should start empty and each added todo should be inserted to the end of the list.
+- After the user clicks on the 'add' button, the todo input field should be "reset"
 - Every todo item should have a "container" div with class `todo-container` that will contain 3 sub-elements:
 
   - An element with a class `todo-text` with the text of the todo task
@@ -96,25 +96,29 @@ Note that each commit to `main` branch will trigger a github [action](https://do
 
 ## Bonus
 
-- Add a new test to check any bonus feature you implemented _(10pts)_
-- Add a drag n' drop functionality. [This](https://htmldom.dev/drag-and-drop-element-in-a-list) might be helpful _(10pts)_
-- Add a way to delete tasks (bonus on bonus - undo option) _(5pts)_
-- Add a way to search tasks _(5pts)_
-- Add a loading spinner if you are using fetch _(5pts)_
-- Dark mode _(5pts)_
-
-- Add any other cool functionality that you want to your app!
-
-  We suggest taking ideas from [htmldom](https://htmldom.dev/)
+- jsonbin.io - see explanation above
+- Freestyle - add any feature you desire. Some ideas:
+  - [drag n' drop functionality](https://htmldom.dev/drag-and-drop-element-in-a-list)
+  - Delete + Edit a todo
+  - Undo action
+  - Search and highlight results
+  - Loading spinner for network request
+  - Mark/Unmark todo as done
+  - Something awesome we didn't think of...
+- For added value, you can add jest/puppeteer test to test any bonus feature you implemented
 
 **Add an explanation in `README.md` for each bonus feature you add and a link to any resoure you used**
 
 ## Grading policy
 
-- Your project will be graded by the number of automatic tests you pass
-- Visual creativity, use css to make this app app AWESOME 💅🏿
-- Code quality <!-- variable names, comments, function names? -->
-- Git usage <!-- commit messages -->
+- Your project will be graded by the number of automatic tests you pass +60pts
+- Using jsonbin.io +20pts
+- Extra freestyle features - Deserving features will grant +5pts each. Please add an explanation about the bonus features you added to the readme.md
+- new jest/puppeteer test +10pts
+- Code quality and style: indentation, Meaningful and non-disambiguate variable names, Comments documentation +10pts
+- Visual creativity, use css to make this app look awesome 💅🏿 +5pts
+- Division to reusable functions, no code duplication +10pts
+- Git usage: meaningful commit messages, small commits, folder and file structures +10pts
 
 ## Submitting
 
