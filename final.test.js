@@ -202,7 +202,7 @@ describe(projectName, () => {
     await page.goto(path, { waitUntil: "networkidle0" });
     const mockToDo = mockToDos[1];
 
-    await page.click("#sortButton");
+    await page.click("#sort-button");
     const elements = await page.$$(".todo-text");
     const secondItem = await (
       await elements[0].getProperty("innerText")
