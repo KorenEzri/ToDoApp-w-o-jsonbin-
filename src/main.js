@@ -686,21 +686,6 @@ window.addEventListener("DOMContentLoaded", function () {
         cancelButtonText: '<i class="fa fa-thumbs-down"></i>',
         cancelButtonAriaLabel: "Thumbs down",
       });
-    } else {
-      Swal.fire({
-        title: `<strong>Hey there!`,
-        icon: "success",
-        html:
-          `</span>Your super-secret-password is: </br> <strong id="intro-password">${storedPassword}</strong>` +
-          `<br><br>You are now signed in. </span>`,
-        showCloseButton: false,
-        showCancelButton: false,
-        focusConfirm: false,
-        confirmButtonText: '<i class="fa fa-thumbs-up"></i> Great!',
-        confirmButtonAriaLabel: "Thumbs up, great!",
-        cancelButtonText: '<i class="fa fa-thumbs-down"></i>',
-        cancelButtonAriaLabel: "Thumbs down",
-      });
     }
   };
   if (!signedFlag) {
@@ -734,7 +719,7 @@ window.addEventListener("DOMContentLoaded", function () {
       if (localStorage.getItem("deleted")) {
         window.location.reload();
       }
-    }, 9000);
+    }, 3000);
     wipeList();
   });
   //REGISTER TO SERVICE (ENTER AND CLICK)
