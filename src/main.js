@@ -69,6 +69,18 @@ window.addEventListener("DOMContentLoaded", function () {
   //FUNCTIONS
   //FUNCTION: ADD TO LIST
   const addToList = () => {
+    if (storedPassword === "cyber4s" || storedPassword === `"cyber4s"`) {
+      Swal.fire({
+        title: "Can't update default bin!",
+        text: "Please sign in or register to continue :)",
+        icon: "info",
+        position: "center",
+        showConfirmButton: true,
+        toast: true,
+        confirmButtonColor: "#3085d6",
+      });
+      return;
+    }
     list.style.display = "none";
     if (userInput.value === "") {
       userInput.focus();
@@ -172,8 +184,10 @@ window.addEventListener("DOMContentLoaded", function () {
               console.log(err);
               window.stop();
             });
-          window.location.reload();
+          const userSpan = document.getElementById("user-span");
+          userSpan.style.display = "none";
           Swal.fire("Deleted!", "Your file has been deleted.", "success");
+          localStorage.setItem("deleted", "true");
         }
       }
     });
@@ -385,6 +399,18 @@ window.addEventListener("DOMContentLoaded", function () {
       itemContainer.appendChild(buttonsDiv);
       itemContainer.appendChild(checkedLabel);
       removeBtn.addEventListener("click", (e) => {
+        if (storedPassword === "cyber4s" || storedPassword === `"cyber4s"`) {
+          Swal.fire({
+            title: "Can't update default bin!",
+            text: "Please sign in or register to continue :)",
+            icon: "info",
+            position: "center",
+            showConfirmButton: true,
+            toast: true,
+            confirmButtonColor: "#3085d6",
+          });
+          return;
+        }
         Swal.fire({
           title: "Are you sure you want to delete?",
           text: "You won't be able to revert this!",
@@ -586,6 +612,18 @@ window.addEventListener("DOMContentLoaded", function () {
   };
   //FUNCTION: EDIT TASK
   const editTask = (e) => {
+    if (storedPassword === "cyber4s" || storedPassword === `"cyber4s"`) {
+      Swal.fire({
+        title: "Can't update default bin!",
+        text: "Please sign in or register to continue :)",
+        icon: "info",
+        position: "center",
+        showConfirmButton: true,
+        toast: true,
+        confirmButtonColor: "#3085d6",
+      });
+      return;
+    }
     let target = e.target.closest("LI");
     emptyarray = [];
     for (let i = 0; i < listItemsAll.length; i++) {
@@ -626,6 +664,7 @@ window.addEventListener("DOMContentLoaded", function () {
   /*---          -----       BEGIN       -----          ---*/
   ///////////////////////***********************************************************/////////////////////////////////
   //LOAD USER'S LIST
+  localStorage.removeItem("deleted");
   readBin(storedPassword, getUser);
   const signedFlag = sessionStorage.getItem("flag");
   const logInMsg = () => {
@@ -689,7 +728,15 @@ window.addEventListener("DOMContentLoaded", function () {
   //SEARCH LIST
   search.addEventListener("keyup", searchList);
   //WIPE LIST
-  wipeButton.addEventListener("click", wipeList);
+  console.log(localStorage.getItem("deleted"));
+  wipeButton.addEventListener("click", () => {
+    setTimeout(() => {
+      if (localStorage.getItem("deleted")) {
+        window.location.reload();
+      }
+    }, 9000);
+    wipeList();
+  });
   //REGISTER TO SERVICE (ENTER AND CLICK)
   registerButton.addEventListener("click", () => {
     if (!firstNameInput.value || !lastNameInput.value) {

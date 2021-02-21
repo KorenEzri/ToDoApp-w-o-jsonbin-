@@ -319,7 +319,7 @@ body {
   cursor: pointer;
   color: #ffffff;
   margin-right: 6px;
-  padding: 5px 19px;
+  padding: 5px 14px;
   font-size: 13px;
   text-decoration: none;
   text-shadow: 0px 1px 0px #283966;
@@ -554,12 +554,12 @@ li:hover {
 }
 
 .todo-text {
-  font-size: 18px;
+  font-size: 14px !important;
   margin-right: 10px;
 }
 
 .todo-created-at {
-  font-size: 14;
+  font-size: 14px;
   word-break: normal;
   margin-right: 6px;
 }
